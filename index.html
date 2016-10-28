@@ -119,6 +119,10 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="http://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/DefaultSidebarTab</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -129,7 +133,11 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/tab-1749438307</li>
+
 <li>$:/state/tab/sidebar--1835078512</li>
+
+<li>$:/state/toc/Contents-Android-209360082</li>
 
 <li>$:/StoryList</li>
 
@@ -141,7 +149,13 @@ Error message and password prompt
 
 <li>adb commands</li>
 
+<li>Android</li>
+
 <li>Android source</li>
+
+<li>Contents</li>
+
+<li>Git</li>
 
 <li>Git commands</li>
 
@@ -157,6 +171,12 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20161028165813392" modified="20161028165813392" title="$:/config/DefaultSidebarTab">
+<pre>Contents</pre>
+</div>
+<div created="20161028171209781" modified="20161028171209781" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all">
+<pre>show</pre>
+</div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -7806,8 +7826,7 @@ Error message and password prompt
 }</pre>
 </div>
 <div created="20161028151621806" modified="20161028151621806" title="$:/DefaultTiddlers">
-<pre>
-</pre>
+<pre></pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -7818,10 +7837,16 @@ Error message and password prompt
 <div created="20161028100915786" modified="20161028100917001" title="$:/SiteTitle">
 <pre>My Wiki</pre>
 </div>
-<div created="20161028102012545" modified="20161028102012545" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20161028165806657" modified="20161028165806657" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
-<div list="GettingStarted" title="$:/StoryList">
+<div created="20161028102012545" modified="20161028171538437" title="$:/state/tab/sidebar--1835078512">
+<pre>Contents</pre>
+</div>
+<div created="20161028171546755" modified="20161028171614670" title="$:/state/toc/Contents-Android-209360082">
+<pre>open</pre>
+</div>
+<div list="[[Push to github commandline]] [[Git commands]] Git [[Android source]] Android [[adb commands]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -7947,7 +7972,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20161028102236810" modified="20161028102538079" tags="commands android adb" title="adb commands" type="text/plain">
+<div created="20161028102236810" modified="20161028171633414" tags="commands adb Android" title="adb commands" type="text/plain">
 <pre>adb logcat -b crash
 
 adb shell settings put secure &lt;name&gt; &lt;value&gt;
@@ -7962,7 +7987,10 @@ adb reboot
 
 </pre>
 </div>
-<div created="20161028102550800" modified="20161028102759863" tags="android source commandline commands" title="Android source" type="text/plain">
+<div created="20161028170814461" modified="20161028171527976" tags="Contents" title="Android">
+<pre></pre>
+</div>
+<div created="20161028102550800" modified="20161028171648504" tags="android source commandline commands Android" title="Android source" type="text/plain">
 <pre>export JACK_SERVER_VM_ARGUMENTS=&quot;-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m&quot;
 out/host/linux-x86/bin/jack-admin kill-server
 out/host/linux-x86/bin/jack-admin start-server
@@ -7974,7 +8002,13 @@ make idegen &amp;&amp; development/tools/idegen/idegen.sh
 
 </pre>
 </div>
-<div created="20161028102016308" modified="20161028102207747" tags="git commands" title="Git commands" type="text/plain">
+<div created="20161028153130587" list-before="$:/core/ui/SideBar/Open" modified="20161028170258748" tags="$:/tags/SideBar" title="Contents">
+<pre>&lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;</pre>
+</div>
+<div created="20161028171705861" modified="20161028171717736" tags="Contents" title="Git">
+<pre></pre>
+</div>
+<div created="20161028102016308" modified="20161028171740391" tags="git commands Git" title="Git commands" type="text/plain">
 <pre>repo forall -c &quot;git clean -fd &amp;&amp; git clean -fX&quot; -j4
 
 repo forall -c &quot;git reset --hard&quot; -j4
@@ -7985,7 +8019,7 @@ git push origin HEAD:refs/changes/13681
 
 </pre>
 </div>
-<div created="20161028101449270" modified="20161028101623861" tags="github git commandline" title="Push to github commandline" type="text/plain">
+<div created="20161028101449270" modified="20161028171803028" tags="github git commandline Git" title="Push to github commandline" type="text/plain">
 <pre>git push -f origin master</pre>
 </div>
 
