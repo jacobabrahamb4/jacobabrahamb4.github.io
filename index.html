@@ -139,6 +139,10 @@ Error message and password prompt
 
 <li>$:/state/toc/Contents-Android-209360082</li>
 
+<li>$:/state/toc/Contents-Git-209360082</li>
+
+<li>$:/state/toc/Contents-Ubuntu-209360082</li>
+
 <li>$:/StoryList</li>
 
 <li>$:/temp/info-plugin</li>
@@ -159,7 +163,17 @@ Error message and password prompt
 
 <li>Git commands</li>
 
+<li>Git set default editor</li>
+
+<li>HandlerThread</li>
+
+<li>Open in terminal</li>
+
 <li>Push to github commandline</li>
+
+<li>Set default editor</li>
+
+<li>Ubuntu</li>
 
 </ul>
 </p>
@@ -7846,7 +7860,13 @@ Error message and password prompt
 <div created="20161028171546755" modified="20161028171614670" title="$:/state/toc/Contents-Android-209360082">
 <pre>open</pre>
 </div>
-<div list="[[Push to github commandline]] [[Git commands]] Git [[Android source]] Android [[adb commands]]" title="$:/StoryList">
+<div created="20161028171814833" modified="20161028171814833" title="$:/state/toc/Contents-Git-209360082">
+<pre>open</pre>
+</div>
+<div created="20161028190458132" modified="20161028190458132" title="$:/state/toc/Contents-Ubuntu-209360082">
+<pre>open</pre>
+</div>
+<div list="HandlerThread [[Set default editor]] [[Open in terminal]] [[Git set default editor]] [[Push to github commandline]] [[Git commands]] Git [[Android source]] Android [[adb commands]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8019,8 +8039,61 @@ git push origin HEAD:refs/changes/13681
 
 </pre>
 </div>
+<div created="20161028190234107" modified="20161028190306472" tags="Git" title="Git set default editor" type="text/plain">
+<pre>git config --global core.editor &quot;vim&quot;
+export GIT_EDITOR=vim</pre>
+</div>
+<div created="20161028190647850" modified="20161028190850800" tags="Android" title="HandlerThread" type="text/plain">
+<pre>http://stackoverflow.com/questions/7107495/message-queue-in-android
+
+http://codetheory.in/android-handlers-runnables-loopers-messagequeue-handlerthread/
+
+
+
+
+HandlerThread thread = new HandlerThread(&quot;Thread name&quot;);
+thread.start();
+
+
+Looper looper = thread.getLooper();
+Handler handler = new Handler(looper) {
+    @Override
+    public void handleMessage(Message msg) {
+        switch(msg.what) {
+            case SOME_MESSAGE_ID:
+                // SOME_MESSAGE_ID is any int value
+                // do something
+                break;
+            // other cases
+        }
+    }
+};
+
+
+handler.post(new Runnable() {
+    @Override
+    public void run() {
+        // this code will be executed on the created thread
+    }
+});
+
+
+// Handler.handleMessage() will be executed on the created thread
+// after the previous Runnable is finished
+handler.sendEmptyMessage(SOME_MESSAGE_ID);</pre>
+</div>
+<div created="20161028190417030" modified="20161028190451891" tags="Ubuntu" title="Open in terminal" type="text/plain">
+<pre>sudo apt-get install nautilus-open-terminal
+nautilus -q</pre>
+</div>
 <div created="20161028101449270" modified="20161028171803028" tags="github git commandline Git" title="Push to github commandline" type="text/plain">
 <pre>git push -f origin master</pre>
+</div>
+<div created="20161028190529339" modified="20161028190551188" tags="Ubuntu" title="Set default editor" type="text/plain">
+<pre>sudo update-alternatives --config editor</pre>
+</div>
+<div created="20161028190349798" modified="20161028190406320" tags="Contents" title="Ubuntu">
+<pre></pre>
 </div>
 
 </div>
