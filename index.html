@@ -137,6 +137,8 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/toc/Contents-Android Studio-209360082</li>
+
 <li>$:/state/toc/Contents-Android-209360082</li>
 
 <li>$:/state/toc/Contents-Git-209360082</li>
@@ -157,6 +159,8 @@ Error message and password prompt
 
 <li>Android source</li>
 
+<li>Android Studio</li>
+
 <li>Contents</li>
 
 <li>Git</li>
@@ -166,6 +170,10 @@ Error message and password prompt
 <li>Git set default editor</li>
 
 <li>HandlerThread</li>
+
+<li>Import aosp source</li>
+
+<li>Install Wiznote</li>
 
 <li>Open in terminal</li>
 
@@ -7857,6 +7865,9 @@ Error message and password prompt
 <div created="20161028102012545" modified="20161028171538437" title="$:/state/tab/sidebar--1835078512">
 <pre>Contents</pre>
 </div>
+<div created="20161028195516389" modified="20161028195516389" title="$:/state/toc/Contents-Android Studio-209360082">
+<pre>open</pre>
+</div>
 <div created="20161028171546755" modified="20161028171614670" title="$:/state/toc/Contents-Android-209360082">
 <pre>open</pre>
 </div>
@@ -7866,7 +7877,7 @@ Error message and password prompt
 <div created="20161028190458132" modified="20161028190458132" title="$:/state/toc/Contents-Ubuntu-209360082">
 <pre>open</pre>
 </div>
-<div list="HandlerThread [[Set default editor]] [[Open in terminal]] [[Git set default editor]] [[Push to github commandline]] [[Git commands]] Git [[Android source]] Android [[adb commands]]" title="$:/StoryList">
+<div list="[[Install Wiznote]] [[Import aosp source]] [[Android Studio]] HandlerThread [[Set default editor]] [[Open in terminal]] [[Git set default editor]] [[Push to github commandline]] [[Git commands]] Git [[Android source]] Android [[adb commands]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8010,17 +8021,18 @@ adb reboot
 <div created="20161028170814461" modified="20161028171527976" tags="Contents" title="Android">
 <pre></pre>
 </div>
-<div created="20161028102550800" modified="20161028171648504" tags="android source commandline commands Android" title="Android source" type="text/plain">
+<div created="20161028102550800" modified="20161028195539225" tags="android source commandline commands Android" title="Android source" type="text/plain">
 <pre>export JACK_SERVER_VM_ARGUMENTS=&quot;-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m&quot;
 out/host/linux-x86/bin/jack-admin kill-server
 out/host/linux-x86/bin/jack-admin start-server
 
 repo sync -c -q -j4
 
-make idegen &amp;&amp; development/tools/idegen/idegen.sh
-
 
 </pre>
+</div>
+<div created="20161028195404718" modified="20161028195419393" tags="Contents" title="Android Studio">
+<pre></pre>
 </div>
 <div created="20161028153130587" list-before="$:/core/ui/SideBar/Open" modified="20161028170258748" tags="$:/tags/SideBar" title="Contents">
 <pre>&lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;</pre>
@@ -8081,6 +8093,18 @@ handler.post(new Runnable() {
 // Handler.handleMessage() will be executed on the created thread
 // after the previous Runnable is finished
 handler.sendEmptyMessage(SOME_MESSAGE_ID);</pre>
+</div>
+<div created="20161028195438757" modified="20161028195510665" tags="[[Android Studio]]" title="Import aosp source" type="text/plain">
+<pre>make idegen &amp;&amp; development/tools/idegen/idegen.sh</pre>
+</div>
+<div created="20161029061547743" modified="20161029061616311" tags="Ubuntu" title="Install Wiznote" type="text/plain">
+<pre>sudo add-apt-repository ppa:wiznote-team
+
+sudo apt-get update
+
+sudo apt-get install wiznote
+
+sudo apt-get remove wiznote</pre>
 </div>
 <div created="20161028190417030" modified="20161028190451891" tags="Ubuntu" title="Open in terminal" type="text/plain">
 <pre>sudo apt-get install nautilus-open-terminal
