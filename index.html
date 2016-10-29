@@ -139,6 +139,8 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/toc/Android-Telephony-209360082</li>
+
 <li>$:/state/toc/Contents-Android Studio-209360082</li>
 
 <li>$:/state/toc/Contents-Android-209360082</li>
@@ -175,6 +177,8 @@ Error message and password prompt
 
 <li>HandlerThread</li>
 
+<li>IIN</li>
+
 <li>Import aosp source</li>
 
 <li>Install Wiznote</li>
@@ -184,6 +188,10 @@ Error message and password prompt
 <li>Push to github commandline</li>
 
 <li>Set default editor</li>
+
+<li>SIM ICCID</li>
+
+<li>Telephony</li>
 
 <li>Ubuntu</li>
 
@@ -7869,8 +7877,11 @@ Error message and password prompt
 <div created="20161028165806657" modified="20161029063305758" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20161028102012545" modified="20161029063056217" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20161028102012545" modified="20161029082606145" title="$:/state/tab/sidebar--1835078512">
+<pre>Contents</pre>
+</div>
+<div created="20161029082806902" modified="20161029083259641" title="$:/state/toc/Android-Telephony-209360082">
+<pre>close</pre>
 </div>
 <div created="20161028195516389" modified="20161028195516389" title="$:/state/toc/Contents-Android Studio-209360082">
 <pre>open</pre>
@@ -7884,7 +7895,7 @@ Error message and password prompt
 <div created="20161028190458132" modified="20161028190458132" title="$:/state/toc/Contents-Ubuntu-209360082">
 <pre>open</pre>
 </div>
-<div list="$:/ControlPanel Ubuntu Contents [[Add remote origin]] [[Install Wiznote]] [[Import aosp source]] [[Android Studio]] HandlerThread [[Set default editor]] [[Open in terminal]] [[Git set default editor]] [[Push to github commandline]] [[Git commands]] Git [[Android source]] Android [[adb commands]]" title="$:/StoryList">
+<div list="[[SIM ICCID]] IIN Telephony Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8044,7 +8055,7 @@ repo sync -c -q -j4
 <div created="20161028195404718" modified="20161029062647057" tags="Contents" title="Android Studio">
 <pre>&lt;&lt;toc-selective-expandable 'Android Studio' sort[title]&gt;&gt;</pre>
 </div>
-<div created="20161028153130587" list-before="$:/core/ui/SideBar/Open" modified="20161029062556549" tags="$:/tags/SideBar" title="Contents">
+<div created="20161028153130587" list-before="$:/core/ui/SideBar/Open" modified="20161029082624968" tags="$:/tags/SideBar" title="Contents">
 <pre>&lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161028171705861" modified="20161029062708749" tags="Contents" title="Git">
@@ -8104,6 +8115,9 @@ handler.post(new Runnable() {
 // after the previous Runnable is finished
 handler.sendEmptyMessage(SOME_MESSAGE_ID);</pre>
 </div>
+<div created="20161029082710702" modified="20161029082803749" tags="Telephony" title="IIN" type="text/plain">
+<pre>The Issuer Identification Number (IIN)</pre>
+</div>
 <div created="20161028195438757" modified="20161028195510665" tags="[[Android Studio]]" title="Import aosp source" type="text/plain">
 <pre>make idegen &amp;&amp; development/tools/idegen/idegen.sh</pre>
 </div>
@@ -8125,6 +8139,23 @@ nautilus -q</pre>
 </div>
 <div created="20161028190529339" modified="20161028190551188" tags="Ubuntu" title="Set default editor" type="text/plain">
 <pre>sudo update-alternatives --config editor</pre>
+</div>
+<div created="20161029083144319" modified="20161029083438153" tags="Telephony" title="SIM ICCID" type="text/plain">
+<pre>https://www.emnify.com/2016/05/06/emnify-8988303-iccid-iin-and-sim-serial-number-explained/
+
+Each SIM is internationally identified by its integrated circuit card identifier (ICCID). ICCIDs are stored in the SIM cards and are also engraved or printed on the SIM card body during a process called personalisation. The number is up to 22 digits long, including a single check digit. Each ICCID is starting with and Issuer Identification Number (IIN).
+
+The Issuer Identification Number (IIN)
+
+There is a maximum of seven digits:
+
+Major industry identifier (MII), 2 fixed digits, 89 for telecommunication purposes.
+Country code, 1–3 digits, as defined by ITU-T recommendation E.164.
+Issuer identifier, 1–4 digits.
+All SIM /ICCID issued by EMnify start with the IIN 8988303, whereas 883 is the non-terrestrial country code of EMnify and 03 its Issuer Identifier.</pre>
+</div>
+<div created="20161029082539687" modified="20161029082642284" tags="Android" title="Telephony">
+<pre>&lt;&lt;toc-selective-expandable 'Telephony' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161028190349798" modified="20161029062617261" tags="Contents" title="Ubuntu">
 <pre>&lt;&lt;toc-selective-expandable 'Ubuntu' sort[title]&gt;&gt;</pre>
