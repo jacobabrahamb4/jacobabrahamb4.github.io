@@ -7932,8 +7932,8 @@ Error message and password prompt
 <div created="20161028102012545" modified="20161031084239973" title="$:/state/tab/sidebar--1835078512">
 <pre>Contents</pre>
 </div>
-<div created="20161029082806902" modified="20161029083259641" title="$:/state/toc/Android-Telephony-209360082">
-<pre>close</pre>
+<div created="20161029082806902" modified="20161031133802844" title="$:/state/toc/Android-Telephony-209360082">
+<pre>open</pre>
 </div>
 <div created="20161028195516389" modified="20161028195516389" title="$:/state/toc/Contents-Android Studio-209360082">
 <pre>open</pre>
@@ -7947,7 +7947,7 @@ Error message and password prompt
 <div created="20161028190458132" modified="20161028190458132" title="$:/state/toc/Contents-Ubuntu-209360082">
 <pre>open</pre>
 </div>
-<div list="[[Push to github commandline]] [[Git commands]] [[Git set default editor]] [[useful hints]] [[replace local changes]] log tagging [[update &amp; merge]] branching [[add &amp; commit]] workflow [[checkout a repository]] [[create a new repository]] [[pull latest changes]] Contents" title="$:/StoryList">
+<div list="[[SIM ICCID]] IIN Telephony [[Android source]] [[adb commands]] HandlerThread [[Push to github commandline]] [[Git commands]] [[Git set default editor]] [[useful hints]] [[replace local changes]] log tagging [[update &amp; merge]] branching [[add &amp; commit]] workflow [[checkout a repository]] [[create a new repository]] [[pull latest changes]] Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8116,12 +8116,20 @@ Now the file is committed to the HEAD, but not in your remote repository yet.
 <div created="20161028170814461" modified="20161029062732937" tags="Contents" title="Android">
 <pre>&lt;&lt;toc-selective-expandable 'Android' sort[title]&gt;&gt;</pre>
 </div>
-<div created="20161028102550800" modified="20161028195539225" tags="android source commandline commands Android" title="Android source" type="text/plain">
-<pre>export JACK_SERVER_VM_ARGUMENTS=&quot;-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m&quot;
+<div created="20161028102550800" modified="20161031133753035" tags="android source commandline commands Android" title="Android source">
+<pre>
+```
+export JACK_SERVER_VM_ARGUMENTS=&quot;-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m&quot;
 out/host/linux-x86/bin/jack-admin kill-server
 out/host/linux-x86/bin/jack-admin start-server
+```
 
+
+
+```
 repo sync -c -q -j4
+```
+
 
 
 </pre>
@@ -8215,18 +8223,15 @@ export GIT_EDITOR=vim
 ```
 </pre>
 </div>
-<div created="20161028190647850" modified="20161028190850800" tags="Android" title="HandlerThread" type="text/plain">
+<div created="20161028190647850" modified="20161031133711165" tags="Android" title="HandlerThread">
 <pre>http://stackoverflow.com/questions/7107495/message-queue-in-android
 
 http://codetheory.in/android-handlers-runnables-loopers-messagequeue-handlerthread/
 
 
-
-
+```
 HandlerThread thread = new HandlerThread(&quot;Thread name&quot;);
 thread.start();
-
-
 Looper looper = thread.getLooper();
 Handler handler = new Handler(looper) {
     @Override
@@ -8241,18 +8246,23 @@ Handler handler = new Handler(looper) {
     }
 };
 
-
 handler.post(new Runnable() {
     @Override
     public void run() {
         // this code will be executed on the created thread
     }
 });
+```
+
 
 
 // Handler.handleMessage() will be executed on the created thread
 // after the previous Runnable is finished
-handler.sendEmptyMessage(SOME_MESSAGE_ID);</pre>
+
+```
+handler.sendEmptyMessage(SOME_MESSAGE_ID);
+```
+</pre>
 </div>
 <div created="20161029082710702" modified="20161029082803749" tags="Telephony" title="IIN" type="text/plain">
 <pre>The Issuer Identification Number (IIN)</pre>
@@ -8364,7 +8374,7 @@ git reset --hard origin/master
 <div created="20161028190529339" modified="20161028190551188" tags="Ubuntu" title="Set default editor" type="text/plain">
 <pre>sudo update-alternatives --config editor</pre>
 </div>
-<div created="20161029083144319" modified="20161029083438153" tags="Telephony" title="SIM ICCID" type="text/plain">
+<div created="20161029083144319" modified="20161031133818764" tags="Telephony" title="SIM ICCID">
 <pre>https://www.emnify.com/2016/05/06/emnify-8988303-iccid-iin-and-sim-serial-number-explained/
 
 Each SIM is internationally identified by its integrated circuit card identifier (ICCID). ICCIDs are stored in the SIM cards and are also engraved or printed on the SIM card body during a process called personalisation. The number is up to 22 digits long, including a single check digit. Each ICCID is starting with and Issuer Identification Number (IIN).
