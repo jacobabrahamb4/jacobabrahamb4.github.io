@@ -7947,7 +7947,7 @@ Error message and password prompt
 <div created="20161028190458132" modified="20161028190458132" title="$:/state/toc/Contents-Ubuntu-209360082">
 <pre>open</pre>
 </div>
-<div list="[[useful hints]] [[replace local changes]] log tagging [[update &amp; merge]] branching [[add &amp; commit]] workflow [[checkout a repository]] [[create a new repository]] [[pull latest changes]] Contents" title="$:/StoryList">
+<div list="[[Push to github commandline]] [[Git commands]] [[Git set default editor]] [[useful hints]] [[replace local changes]] log tagging [[update &amp; merge]] branching [[add &amp; commit]] workflow [[checkout a repository]] [[create a new repository]] [[pull latest changes]] Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8193,20 +8193,27 @@ to create a new git repository.
 <div created="20161028171705861" modified="20161029062708749" tags="Contents" title="Git">
 <pre>&lt;&lt;toc-selective-expandable 'Git' sort[title]&gt;&gt;</pre>
 </div>
-<div created="20161028102016308" modified="20161028171740391" tags="git commands Git" title="Git commands" type="text/plain">
-<pre>repo forall -c &quot;git clean -fd &amp;&amp; git clean -fX&quot; -j4
-
+<div created="20161028102016308" modified="20161031093434509" tags="git commands Git" title="Git commands">
+<pre>
+```
+repo forall -c &quot;git clean -fd &amp;&amp; git clean -fX&quot; -j4
 repo forall -c &quot;git reset --hard&quot; -j4
 
 git push origin HEAD:refs/for/borqs_rjil_rcs_dvlp
 
 git push origin HEAD:refs/changes/13681
+```
+
 
 </pre>
 </div>
-<div created="20161028190234107" modified="20161028190306472" tags="Git" title="Git set default editor" type="text/plain">
-<pre>git config --global core.editor &quot;vim&quot;
-export GIT_EDITOR=vim</pre>
+<div created="20161028190234107" modified="20161031093345156" tags="Git" title="Git set default editor">
+<pre>
+```
+git config --global core.editor &quot;vim&quot;
+export GIT_EDITOR=vim
+```
+</pre>
 </div>
 <div created="20161028190647850" modified="20161028190850800" tags="Android" title="HandlerThread" type="text/plain">
 <pre>http://stackoverflow.com/questions/7107495/message-queue-in-android
@@ -8312,8 +8319,12 @@ git pull origin master
 
 </pre>
 </div>
-<div created="20161028101449270" modified="20161028171803028" tags="github git commandline Git" title="Push to github commandline" type="text/plain">
-<pre>git push -f origin master</pre>
+<div created="20161028101449270" modified="20161031093453771" tags="github git commandline Git" title="Push to github commandline">
+<pre>
+```
+git push -f origin master
+```
+</pre>
 </div>
 <div created="20161031084356938" modified="20161031090229934" tags="git" title="pushing changes">
 <pre>&lt;&lt;&lt;
