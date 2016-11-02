@@ -185,6 +185,8 @@ Error message and password prompt
 
 <li>create a new repository</li>
 
+<li>Eclipse</li>
+
 <li>Git</li>
 
 <li>Git commands</li>
@@ -197,9 +199,13 @@ Error message and password prompt
 
 <li>Import aosp source</li>
 
+<li>Indent to spaces</li>
+
 <li>Install Wiznote</li>
 
 <li>log</li>
+
+<li>make .classpath</li>
 
 <li>Open in terminal</li>
 
@@ -216,6 +222,8 @@ Error message and password prompt
 <li>Screenshot from 2016-10-31 14:15:02.png</li>
 
 <li>Set default editor</li>
+
+<li>Set tab policy</li>
 
 <li>SIM ICCID</li>
 
@@ -7929,7 +7937,7 @@ Error message and password prompt
 <div created="20161028165806657" modified="20161029063305758" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20161028102012545" modified="20161031084239973" title="$:/state/tab/sidebar--1835078512">
+<div created="20161028102012545" modified="20161102131242656" title="$:/state/tab/sidebar--1835078512">
 <pre>Contents</pre>
 </div>
 <div created="20161029082806902" modified="20161031133802844" title="$:/state/toc/Android-Telephony-209360082">
@@ -7947,7 +7955,7 @@ Error message and password prompt
 <div created="20161028190458132" modified="20161028190458132" title="$:/state/toc/Contents-Ubuntu-209360082">
 <pre>open</pre>
 </div>
-<div list="[[Set default editor]] [[Open in terminal]] [[Install Wiznote]] [[Add remote origin]] [[Import aosp source]] [[SIM ICCID]] IIN Telephony [[Android source]] [[adb commands]] HandlerThread [[Push to github commandline]] [[Git commands]] [[Git set default editor]] [[useful hints]] [[replace local changes]] log tagging [[update &amp; merge]] branching [[add &amp; commit]] workflow [[checkout a repository]] [[create a new repository]] [[pull latest changes]] Contents" title="$:/StoryList">
+<div list="[[Import aosp source]] [[make .classpath]] Git [[Set tab policy]] Eclipse [[Indent to spaces]] Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8117,8 +8125,7 @@ Now the file is committed to the HEAD, but not in your remote repository yet.
 <pre>&lt;&lt;toc-selective-expandable 'Android' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161028102550800" modified="20161031133753035" tags="android source commandline commands Android" title="Android source">
-<pre>
-```
+<pre>```
 export JACK_SERVER_VM_ARGUMENTS=&quot;-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m&quot;
 out/host/linux-x86/bin/jack-admin kill-server
 out/host/linux-x86/bin/jack-admin start-server
@@ -8138,8 +8145,7 @@ repo sync -c -q -j4
 <pre>&lt;&lt;toc-selective-expandable 'Android Studio' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161031084434426" modified="20161031091941140" tags="Git" title="branching">
-<pre>
-Branches are used to develop features isolated from each other. The master branch is the &quot;default&quot; branch when you create a repository. Use other branches for development and merge them back to the master branch upon completion.
+<pre>Branches are used to develop features isolated from each other. The master branch is the &quot;default&quot; branch when you create a repository. Use other branches for development and merge them back to the master branch upon completion.
 
 [img[Screenshot from 2016-10-31 14:15:02.png]]
 
@@ -8198,12 +8204,14 @@ git init
 to create a new git repository.
 </pre>
 </div>
-<div created="20161028171705861" modified="20161029062708749" tags="Contents" title="Git">
+<div created="20161102115431323" modified="20161102115620676" tags="Contents" title="Eclipse">
+<pre>&lt;&lt;toc-selective-expandable 'Eclipse' sort[title]&gt;&gt;</pre>
+</div>
+<div created="20161028171705861" modified="20161102115608467" tags="Contents" title="Git">
 <pre>&lt;&lt;toc-selective-expandable 'Git' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161028102016308" modified="20161031093434509" tags="git commands Git" title="Git commands">
-<pre>
-```
+<pre>```
 repo forall -c &quot;git clean -fd &amp;&amp; git clean -fX&quot; -j4
 repo forall -c &quot;git reset --hard&quot; -j4
 
@@ -8216,8 +8224,7 @@ git push origin HEAD:refs/changes/13681
 </pre>
 </div>
 <div created="20161028190234107" modified="20161031093345156" tags="Git" title="Git set default editor">
-<pre>
-```
+<pre>```
 git config --global core.editor &quot;vim&quot;
 export GIT_EDITOR=vim
 ```
@@ -8270,6 +8277,9 @@ handler.sendEmptyMessage(SOME_MESSAGE_ID);
 <div created="20161028195438757" modified="20161028195510665" tags="[[Android Studio]]" title="Import aosp source" type="text/plain">
 <pre>make idegen &amp;&amp; development/tools/idegen/idegen.sh</pre>
 </div>
+<div created="20161102075453311" modified="20161102075522070" tags="[[Android Studio]]" title="Indent to spaces">
+<pre>Convert Tabs to Spaces. Just click &quot;Indent with 4 spaces&quot; whenever the warning comes up. Or go to Edit &gt; Convert Indents &gt; To Spaces.</pre>
+</div>
 <div created="20161029061547743" modified="20161029061616311" tags="Ubuntu" title="Install Wiznote" type="text/plain">
 <pre>sudo add-apt-repository ppa:wiznote-team
 
@@ -8317,21 +8327,44 @@ git log --help
 ```
 </pre>
 </div>
+<div created="20161102131056602" modified="20161102131426846" tags="Eclipse" title="make .classpath">
+<pre>https://newcircle.com/s/post/1720/aosp_sources_in_the_ide
+
+The project has a handy README that explains all the details, but here it is spelled out:
+
+```
+source build/envsetup.sh
+lunch aosp_x86-eng #(or pick your favorite lunch target)
+make
+mmm development/tools/idegen/
+development/tools/idegen/idegen.sh
+```
+
+The first three steps just ensure that you have a built image ready…
+The next step is to build the IDEGen module. This is the process that will fail if you don't have the proper intermediates in place first. Finally we run the generator script, which can take a few minutes to complete as it traverses the entire source tree.
+What are you left with?
+The root of your AOSP tree will now have three new files in it:
+
+```
+.classpath (Eclipse)
+android.ipr (IntelliJ / Android Studio)
+android.iml (IntelliJ / Android Studio)
+```
+</pre>
+</div>
 <div created="20161028190417030" modified="20161028190451891" tags="Ubuntu" title="Open in terminal" type="text/plain">
 <pre>sudo apt-get install nautilus-open-terminal
 nautilus -q</pre>
 </div>
 <div created="20161031070401280" modified="20161031091858972" tags="Git" title="pull latest changes">
-<pre>
-```
+<pre>```
 git pull origin master
 ```
 
 </pre>
 </div>
 <div created="20161028101449270" modified="20161031093453771" tags="github git commandline Git" title="Push to github commandline">
-<pre>
-```
+<pre>```
 git push -f origin master
 ```
 </pre>
@@ -8373,6 +8406,18 @@ git reset --hard origin/master
 </div>
 <div created="20161028190529339" modified="20161028190551188" tags="Ubuntu" title="Set default editor" type="text/plain">
 <pre>sudo update-alternatives --config editor</pre>
+</div>
+<div created="20161102115448949" modified="20161102115547163" tags="Eclipse" title="Set tab policy">
+<pre>Java Editor
+
+*Click Window » Preferences
+*Expand Java » Code Style
+*Click Formatter
+*Click the Edit button
+*Click the Indentation tab
+*Under General Settings, set Tab policy to: Spaces only
+*Click OK ad nauseam to apply the changes.
+</pre>
 </div>
 <div created="20161029083144319" modified="20161031133818764" tags="Telephony" title="SIM ICCID">
 <pre>https://www.emnify.com/2016/05/06/emnify-8988303-iccid-iin-and-sim-serial-number-explained/
