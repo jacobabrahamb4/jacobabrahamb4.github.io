@@ -147,6 +147,8 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/toc/Android-Adb-209360082</li>
+
 <li>$:/state/toc/Android-Telephony-209360082</li>
 
 <li>$:/state/toc/Contents-Android Studio-209360082</li>
@@ -164,6 +166,8 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>Adb</li>
 
 <li>adb commands</li>
 
@@ -205,6 +209,8 @@ Error message and password prompt
 
 <li>log</li>
 
+<li>Logcat</li>
+
 <li>make .classpath</li>
 
 <li>Open in terminal</li>
@@ -224,6 +230,8 @@ Error message and password prompt
 <li>Set default editor</li>
 
 <li>Set tab policy</li>
+
+<li>settings put secure</li>
 
 <li>SIM ICCID</li>
 
@@ -7940,6 +7948,9 @@ Error message and password prompt
 <div created="20161028102012545" modified="20161102131242656" title="$:/state/tab/sidebar--1835078512">
 <pre>Contents</pre>
 </div>
+<div created="20161104170706901" modified="20161104170706901" title="$:/state/toc/Android-Adb-209360082">
+<pre>open</pre>
+</div>
 <div created="20161029082806902" modified="20161031133802844" title="$:/state/toc/Android-Telephony-209360082">
 <pre>open</pre>
 </div>
@@ -7955,7 +7966,7 @@ Error message and password prompt
 <div created="20161028190458132" modified="20161028190458132" title="$:/state/toc/Contents-Ubuntu-209360082">
 <pre>open</pre>
 </div>
-<div list="[[Import aosp source]] [[make .classpath]] Git [[Set tab policy]] Eclipse [[Indent to spaces]] Contents" title="$:/StoryList">
+<div list="[[settings put secure]] Logcat Adb [[adb commands]] Contents [[Android Studio]] [[Import aosp source]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8081,11 +8092,12 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20161028102236810" modified="20161028171633414" tags="commands adb Android" title="adb commands" type="text/plain">
-<pre>adb logcat -b crash
-
-adb shell settings put secure &lt;name&gt; &lt;value&gt;
-
+<div created="20161104170203213" modified="20161104170302565" tags="Android" title="Adb">
+<pre>&lt;&lt;toc-selective-expandable 'Adb' sort[title]&gt;&gt;</pre>
+</div>
+<div created="20161028102236810" modified="20161104170834715" tags="Adb" title="adb commands">
+<pre>
+```
 sudo adb root
 adb remount
 adb shell rm -rf /system/priv-app/Dialer/
@@ -8093,6 +8105,8 @@ adb shell sync
 adb push Dialer/ /system/priv-app/Dialer/
 adb shell sync
 adb reboot
+```
+
 
 </pre>
 </div>
@@ -8191,7 +8205,7 @@ git clone username@host:/path/to/repository
 
 </pre>
 </div>
-<div created="20161028153130587" list-before="$:/core/ui/SideBar/Open" modified="20161029082624968" tags="$:/tags/SideBar" title="Contents">
+<div created="20161028153130587" list-before="$:/core/ui/SideBar/Open" modified="20161104170309141" tags="$:/tags/SideBar" title="Contents">
 <pre>&lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161031083038338" modified="20161031091842096" tags="Git" title="create a new repository">
@@ -8327,6 +8341,13 @@ git log --help
 ```
 </pre>
 </div>
+<div created="20161104170607815" modified="20161104170642030" tags="Adb" title="Logcat">
+<pre>
+```
+adb logcat -b crash
+```
+</pre>
+</div>
 <div created="20161102131056602" modified="20161102131426846" tags="Eclipse" title="make .classpath">
 <pre>https://newcircle.com/s/post/1720/aosp_sources_in_the_ide
 
@@ -8417,6 +8438,13 @@ git reset --hard origin/master
 *Click the Indentation tab
 *Under General Settings, set Tab policy to: Spaces only
 *Click OK ad nauseam to apply the changes.
+</pre>
+</div>
+<div created="20161104170725888" modified="20161104170754619" tags="Adb" title="settings put secure">
+<pre>
+```
+adb shell settings put secure &lt;name&gt; &lt;value&gt;
+```
 </pre>
 </div>
 <div created="20161029083144319" modified="20161031133818764" tags="Telephony" title="SIM ICCID">
