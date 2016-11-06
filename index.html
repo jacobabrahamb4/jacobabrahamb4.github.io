@@ -275,6 +275,8 @@ Error message and password prompt
 
 <li>update &amp; merge</li>
 
+<li>update alternatives</li>
+
 <li>useful hints</li>
 
 <li>workflow</li>
@@ -8012,7 +8014,7 @@ Error message and password prompt
 <div created="20161105131856117" modified="20161105131856117" title="$:/state/toc/Java-Concurrency-209360082">
 <pre>open</pre>
 </div>
-<div list="[[Java thread implementation]] $:/Import [[State diagram of threads]] [[Java Threads]] Concurrency [[make symbolic link]] NDK [[Java VM]] Android Java" title="$:/StoryList">
+<div list="[[update alternatives]] [[Java thread implementation]] $:/Import [[State diagram of threads]] [[Java Threads]] Concurrency [[make symbolic link]] NDK [[Java VM]] Android Java" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8602,6 +8604,59 @@ before merging changes, you can also preview them by using
 
 ```
 git diff &lt;source_branch&gt; &lt;target_branch&gt;
+```
+</pre>
+</div>
+<div created="20161106120823303" modified="20161106121108461" tags="Ubuntu" title="update alternatives">
+<pre># Adding a new alternative for &quot;java&quot;.
+
+```
+sudo update-alternatives --install /usr/bin/java java /media/mydisk/jdk/bin/java 1
+```
+
+
+# Setting the new alternative as default for &quot;java&quot;.
+
+```
+sudo update-alternatives --config java
+```
+
+You have to do this for other jdk components too. These components are 
+
+```
+appletviewer, extcheck, idlj, jar, jarsigner, javac, javadoc, javah, javap, javaws, jconsole, jdb, jexec, jhat, jinfo, jmap, jps, jrunscript, jsadebugd, jstack, jstat, keytool, mozilla-javaplugin.so, native2ascii, policytool, rmic, rmid, rmiregistry, schemagen, serialver, servertool, tnameserv, unpack200, wsgen, wsimport, xjc.
+```
+
+
+For further information, you can see the man pages for update-alternatives : man update-alternatives.
+
+The command update-java-alternatives sets alternatives for java components and it seems to use update-alternatives for this.
+
+EDIT: The answer above targets Java 6.
+
+For Java 7, you have to add jcmd to the Java 6 list.
+For Java 8, you have to add jcmd, jjs and jdeps to the Java 6 list.
+
+
+
+```
+sudo update-alternatives --install /usr/bin/java java /media/mydisk/jdk/bin/java 100
+sudo update-alternatives --install /usr/bin/javac javac /media/mydisk/jdk/javac 100
+sudo update-alternatives --install /usr/bin/java_vm java_vm /media/mydisk/jdk/bin/java_vm 100
+sudo update-alternatives --install /usr/bin/jcontrol jcontrol /media/mydisk/jdk/bin/jcontrol 100
+sudo update-alternatives --install /usr/bin/jexec jexec /media/mydisk/jdk/jre/lib/jexec 100
+sudo update-alternatives --install /usr/bin/jexec jexec /media/mydisk/jdk/jre/lib/jexec 100 --slave /usr/share/binfmts/jar jexec-binfmt media/mydisk/jdk/jre/lib/javaws
+```
+
+And then you can use these command to set as default. Most probably, these aren't needed.
+
+
+```
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+sudo update-alternatives --config java_vm
+sudo update-alternatives --config jcontrol
+sudo update-alternatives --config jexec
 ```
 </pre>
 </div>
