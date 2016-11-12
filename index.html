@@ -201,6 +201,8 @@ Error message and password prompt
 
 <li>Eclipse</li>
 
+<li>fillColor</li>
+
 <li>Git</li>
 
 <li>Git commands</li>
@@ -278,6 +280,8 @@ Error message and password prompt
 <li>update alternatives</li>
 
 <li>useful hints</li>
+
+<li>Views</li>
 
 <li>workflow</li>
 
@@ -8014,7 +8018,7 @@ Error message and password prompt
 <div created="20161105131856117" modified="20161105131856117" title="$:/state/toc/Java-Concurrency-209360082">
 <pre>open</pre>
 </div>
-<div list="[[update alternatives]] [[Java thread implementation]] $:/Import [[State diagram of threads]] [[Java Threads]] Concurrency [[make symbolic link]] NDK [[Java VM]] Android Java" title="$:/StoryList">
+<div list="fillColor Adb Views Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8140,12 +8144,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20161104170203213" modified="20161104170302565" tags="Android" title="Adb">
+<div created="20161104170203213" modified="20161112192830494" tags="Android" title="Adb">
 <pre>&lt;&lt;toc-selective-expandable 'Adb' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161028102236810" modified="20161104170834715" tags="Adb" title="adb commands">
-<pre>
-```
+<pre>```
 sudo adb root
 adb remount
 adb shell rm -rf /system/priv-app/Dialer/
@@ -8271,6 +8274,18 @@ to create a new git repository.
 </div>
 <div created="20161102115431323" modified="20161102115620676" tags="Contents" title="Eclipse">
 <pre>&lt;&lt;toc-selective-expandable 'Eclipse' sort[title]&gt;&gt;</pre>
+</div>
+<div created="20161112192832617" modified="20161112193012563" tags="Views" title="fillColor">
+<pre>Fill color of the circle
+0x represents, this is an hexadecimal code
+55 represents percentage of transparency. For 100% transparency, specify 00.
+For 0% transparency ( ie, opaque ) , specify ff
+The remaining 6 characters(00ff00) specify the fill color
+
+```
+circleOptions.fillColor(0x5500ff00);
+```
+</pre>
 </div>
 <div created="20161028171705861" modified="20161102115608467" tags="Contents" title="Git">
 <pre>&lt;&lt;toc-selective-expandable 'Git' sort[title]&gt;&gt;</pre>
@@ -8430,8 +8445,7 @@ git log --help
 </pre>
 </div>
 <div created="20161104170607815" modified="20161104170642030" tags="Adb" title="Logcat">
-<pre>
-```
+<pre>```
 adb logcat -b crash
 ```
 </pre>
@@ -8462,8 +8476,7 @@ android.iml (IntelliJ / Android Studio)
 </pre>
 </div>
 <div created="20161105080620133" modified="20161105080716170" tags="Ubuntu" title="make symbolic link">
-<pre>
-```
+<pre>```
 ln -s android-ndk ndk
 ```
 </pre>
@@ -8539,8 +8552,7 @@ git reset --hard origin/master
 </pre>
 </div>
 <div created="20161104170725888" modified="20161104170754619" tags="Adb" title="settings put secure">
-<pre>
-```
+<pre>```
 adb shell settings put secure &lt;name&gt; &lt;value&gt;
 ```
 </pre>
@@ -8685,6 +8697,9 @@ use interactive adding
 git add -i
 ```
 </pre>
+</div>
+<div created="20161112192729827" modified="20161112192823916" tags="Android" title="Views">
+<pre>&lt;&lt;toc-selective-expandable 'Views' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20161031083218745" modified="20161031084231917" tags="Git" title="workflow">
 <pre>your local repository consists of three &quot;trees&quot; maintained by git. the first one is your Working Directory which holds the actual files. the second one is the Index which acts as a staging area and finally the HEAD which points to the last commit you've made.
